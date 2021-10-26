@@ -32,5 +32,5 @@ css('css/justified-gallery.min.css');
 css('css/magnific-popup.css');
 css('revolution/css/layers.css');
 css('revolution/css/navigation.css');
-css('css/responsive.css');
+// css('css/responsive.css');
 

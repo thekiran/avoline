@@ -43,7 +43,7 @@
     <!-- <link rel="stylesheet" href="css/style.css" /> -->
     <link rel="stylesheet" href="css/styles.min.css" />
     <!-- responsive css -->
-    <!-- <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'" /> -->
+    <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'" />
     <!--[if IE]>
             <script defer src="js/html5shiv.js"></script>
         <![endif]-->
@@ -1135,7 +1135,7 @@
     <!-- magnific popup -->
     <script defer type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
     <!-- portfolio with shorting tab -->
-    <!-- <script defer type="text/javascript" src="js/isotope.pkgd.min.js"></script> -->
+    <script defer type="text/javascript" src="js/isotope.pkgd.min.js"></script>
     <!-- images loaded -->
     <script defer type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
     <!-- pull menu -->
@@ -1151,11 +1151,11 @@
     <!-- justified gallery  -->
     <script defer type="text/javascript" src="js/justified-gallery.min.js"></script>
     <!--pie chart-->
-    <!-- <script defer type="text/javascript" src="js/jquery.easypiechart.min.js"></script> -->
+    <script defer type="text/javascript" src="js/jquery.easypiechart.min.js"></script>
     <!-- instagram -->
-    <!-- <script defer type="text/javascript" src="js/instafeed.min.js"></script> -->
+    <script defer type="text/javascript" src="js/instafeed.min.js"></script>
     <!-- retina -->
-    <!-- <script defer type="text/javascript" src="js/retina.min.js"></script> -->
+    <script defer type="text/javascript" src="js/retina.min.js"></script>
     <!-- revolution -->
     <!-- <script defer type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script> -->
     <!-- <script defer type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script> -->
@@ -1213,12 +1213,12 @@
         
     
         $LAB
-            .script('js/isotope.pkgd.min.js')
-            .script('js/jquery.easypiechart.min.js')
+            // .script('js/isotope.pkgd.min.js')
+            // .script('js/jquery.easypiechart.min.js')
             // .wait() 
-            .script('js/instafeed.min.js')
+            // .script('js/instafeed.min.js')
             // .wait() 
-            .script('js/retina.min.js')
+            // .script('js/retina.min.js')
             // .wait() 
             .script('revolution/js/jquery.themepunch.tools.min.js')
             // .wait() 
@@ -1231,8 +1231,8 @@
 
 
 
-        window.onload = function (){
-        // function loadNonCriticScripts (){
+        // window.onload = function (){
+        function loadNonCriticScripts (){
     
             // .script('js/modernizr.js').wait() 
             // .script('js/bootstrap.min.js').wait()
@@ -1266,44 +1266,44 @@
 
 
         }
-        // document.onreadystatechange = function () {
-        //     if (document.readyState === 'interactive') {
-        //         // Execute code here
-        //         loadNonCriticScripts()
-        //     }
-        // }
+        document.onreadystatechange = function () {
+            if (document.readyState === 'interactive') {
+                // Execute code here
+                loadNonCriticScripts()
+            }
+        }
 
 
      
         document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages = document.querySelectorAll("img");    
-  var lazyloadThrottleTimeout;
-  
-  function lazyload () {
-    if(lazyloadThrottleTimeout) {
-      clearTimeout(lazyloadThrottleTimeout);
-    }    
-    
-    lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-            //   img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
+        var lazyloadImages = document.querySelectorAll("img");    
+        var lazyloadThrottleTimeout;
+        
+        function lazyload () {
+            if(lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+            }    
+            
+            lazyloadThrottleTimeout = setTimeout(function() {
+                var scrollTop = window.pageYOffset;
+                lazyloadImages.forEach(function(img) {
+                    if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                    img.src = img.dataset.src;
+                    //   img.classList.remove('lazy');
+                    }
+                });
+                if(lazyloadImages.length == 0) { 
+                document.removeEventListener("scroll", lazyload);
+                window.removeEventListener("resize", lazyload);
+                window.removeEventListener("orientationChange", lazyload);
+                }
+            }, 20);
         }
-    }, 20);
-  }
-  
-  document.addEventListener("scroll", lazyload);
-  window.addEventListener("resize", lazyload);
-  window.addEventListener("orientationChange", lazyload);
-});
+        
+        document.addEventListener("scroll", lazyload);
+        window.addEventListener("resize", lazyload);
+        window.addEventListener("orientationChange", lazyload);
+        });
     </script>
 
     <!-- <script defer src="https://www.google.com/recaptcha/api.js" async defer></script> -->
